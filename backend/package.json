@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "shx rm -rf dist && shx cp -r src dist",
     "dev": "nodemon src/index.js",
-    "start": "node src/index.js",
-    "build": "shx rm -rf dist && shx cp -r src dist"
+    "start": "node src/index.js"
+    
      
   },
   "keywords": [],
