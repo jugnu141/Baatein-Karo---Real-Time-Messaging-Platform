@@ -49,5 +49,10 @@ connectDB();
 //
 
 app.listen(PORT, () => {
-  console.log(`Voting app listening on port ${PORT}`)
+  console.log(`Voting app listening on port ${PORT}`);
+
+  // only in production
+  if(process.env.NODE_ENV === "production") {
+    job.start()
+  }
 })
