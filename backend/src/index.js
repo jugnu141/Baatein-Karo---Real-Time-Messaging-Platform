@@ -6,6 +6,7 @@ import cors from "cors";
 import fs from "fs";
 // fs -> file system
 import path from "path";
+import job from "./cron.js";
 
 
 const app = express();
