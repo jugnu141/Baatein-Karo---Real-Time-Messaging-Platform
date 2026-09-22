@@ -8,6 +8,8 @@ import fs from "fs";
 import path from "path";
 import job from "./lib/cron.js";
 import clerkWebhook from "./webhooks/clerk.webhook.js";
+import authRoutes from "./routes/auth.route.js";
+
 
 
 const app = express();
@@ -32,6 +34,10 @@ app.get('/health', (req, res) => {
     ok:true
   })
 });
+
+
+app.use("/api/auth", authRoutes)
+
 
 
 // if public directory exists , serve the static file
